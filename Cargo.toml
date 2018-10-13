@@ -1,0 +1,21 @@
+[package]
+name = "peke_envs"
+version = "0.1.0"
+authors = ["Satoshi Tajima <Satoshi_Tajima+github@voyagegroup.com>"]
+
+[dependencies]
+libc = "*"
+elf = "*"
+nix = "*"
+hex = "*"
+proc-maps = "*"
+regex = "*"
+failure = "*"
+
+[[bin]]
+name = "peek"
+path = "src/peek.rs"
+
+[[bin]]
+name = "poke"
+path = "src/poke.rs"
