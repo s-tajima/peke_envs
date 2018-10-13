@@ -16,6 +16,18 @@
 * By executing Ptrace Peek, read and follow pointers, and read the environment variables.
 * [WIP] By executing Ptrace Peek, overwrite the environment variables.
 
+## Usage
+
+* Peek environment variables.
+```
+$ peek <pid>
+```
+
+* [WIP] Poke environment variables.
+```
+$ peek <pid> <key> <value>
+```
+
 ## License
 
 [MIT](./LICENSE)
