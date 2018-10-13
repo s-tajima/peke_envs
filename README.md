@@ -8,7 +8,7 @@
 * Peek(Read) **current** environment variables in a arbitrary process.
 * [WIP] Poke(Overwrite) environment variables in a arbitrary process.
 
-*You can do the same things easy/safely by using gdb.*
+*You can do the same things more easily/safely by using gdb.*
 
 ## How it works
 
