@@ -5,16 +5,18 @@
 ## Concepts
 
 * **Experimental purpose**
-* Peek(Read) **current** environment variables of arbitrary process.
-* [WIP] Poke(Overwrite) environment variables of arbitrary process.
+* Peek(Read) **current** environment variables in a arbitrary process.
+* [WIP] Poke(Overwrite) environment variables in a arbitrary process.
+
+*You can do the same things easy/safely by using gdb.*
 
 ## How it works
 
 * Specify a target process as the tracee by pid.
-* Search location for __environ pointer of the tracee.
+* Search location for libc and __environ of the tracee.
 * Exec Ptrace Attach to the tracee.
-* By executing Ptrace Peek, read and follow pointers, and read the environment variables.
-* [WIP] By executing Ptrace Peek, overwrite the environment variables.
+* By executing Ptrace Peek, read and follow pointers, and read environment variables.
+* [WIP] By executing Ptrace Peek, overwrite environment variables.
 
 ## Usage
 
