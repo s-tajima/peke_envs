@@ -5,7 +5,7 @@
 ## Concepts
 
 * **Experimental purpose**
-* Peek(Read) and Poke(Write) environment variables of arbitrary process.
+* Peek(Read) and Poke(Write) **current** environment variables of arbitrary process.
 
 
 ## How it works
