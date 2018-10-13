@@ -17,7 +17,7 @@
 
 ## License
 
-[MIT](./LICENSE.txt)
+[MIT](./LICENSE)
 
 ## Author
 
