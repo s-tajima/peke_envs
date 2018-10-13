@@ -1,7 +1,7 @@
 [package]
 name = "peke_envs"
 version = "0.1.0"
-authors = ["Satoshi Tajima <Satoshi_Tajima+github@voyagegroup.com>"]
+authors = ["Satoshi Tajima <tajima1989@gmail.com>"]
 
 [dependencies]
 libc = "*"
