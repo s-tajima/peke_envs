@@ -4,7 +4,7 @@
 
 ## Concepts
 
-* **Experimental purpose**
+* **Experimental purpose.**
 * Peek(Read) **current** environment variables in a arbitrary process.
 * [WIP] Poke(Overwrite) environment variables in a arbitrary process.
 
