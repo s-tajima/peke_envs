@@ -25,7 +25,7 @@ fn main() {
     let val: String = env::args().nth(3).unwrap();
     println!("key:{} val:{}", key, val);
 
-    let p = process::Process{pid: pid};
+    let p = process::Process{pid};
 
     let symbol_name: &str = "__environ";
 
@@ -51,7 +51,7 @@ fn main() {
             //HEX: 54 4b 45 59 3d 46 49 58
             //LTE: 58 49 46 3d 59 45 4b 54
             //U64: 6361693177942199124
-            p.poke(env_ptr, 6361693177942199124).unwrap();
+            p.poke(env_ptr, 6_361_693_177_942_199_124).unwrap();
             
         }
     }

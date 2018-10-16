@@ -4,6 +4,10 @@ release:
 build:
 	cargo build
 
+clippy:
+	cargo clean
+	cargo clippy
+
 peek:
 	cargo run --bin peek $(PID)
 

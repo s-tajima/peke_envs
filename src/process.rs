@@ -30,27 +30,25 @@ impl Process {
     }
     
     pub fn peek(&self, addr: u64) -> Result<u64, String> {
-        let vec = unsafe { ptrace::ptrace(
+        unsafe { ptrace::ptrace(
             ptrace::Request::PTRACE_PEEKDATA,
             self.pid,
             addr as *mut libc::c_void,
             ptr::null_mut(),
         )}
         .map(|i| i as u64) 
-        .map_err(|e| format!("failed to ptrace peek {} ({})", self.pid, e));
-        vec
+        .map_err(|e| format!("failed to ptrace peek {} ({})", self.pid, e))
     }
 
     pub fn poke(&self, addr: u64, data: u64) -> Result<u64, String> {
-        let vec = unsafe { ptrace::ptrace(
+        unsafe { ptrace::ptrace(
             ptrace::Request::PTRACE_POKEDATA,
             self.pid,
             addr as *mut libc::c_void,
             data as *mut libc::c_void,
         )}
         .map(|i| i as u64) 
-        .map_err(|e| format!("failed to ptrace poke {} ({})", self.pid, e));
-        vec
+        .map_err(|e| format!("failed to ptrace poke {} ({})", self.pid, e))
     }
 
 
@@ -67,7 +65,7 @@ impl Process {
             vec.push(val);
         }
     
-        return Ok(vec)
+        Ok(vec)
     }
     
     pub fn get_env_val(&self, ptr: u64) -> Result<String, String> {
@@ -92,7 +90,7 @@ impl Process {
             cursor += 8;
         }
     
-        return Ok(val)
+        Ok(val)
     }
 
 }

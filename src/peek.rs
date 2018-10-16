@@ -21,7 +21,7 @@ fn main() {
     let pid_int: i32 = pid_str.parse().unwrap();
     let pid = nix::unistd::Pid::from_raw(pid_int);
 
-    let p = process::Process{pid: pid};
+    let p = process::Process{pid};
 
     let symbol_name: &str = "__environ";
 
