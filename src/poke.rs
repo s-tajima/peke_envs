@@ -30,7 +30,7 @@ fn main() {
     let symbol_name: &str = "__environ";
 
     let map = maps::get_maps(pid_int).unwrap();
-    let filename = map.clone().filename().clone().unwrap().to_string();
+    let filename = map.filename().clone().unwrap().to_string();
     let offset = maps::get_elf_symbol_value(filename, symbol_name).unwrap();
     let addr_env_ptr_ptr: u64 = map.start() as u64 + offset as u64;
 
